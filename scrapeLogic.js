@@ -17,13 +17,13 @@ const scrapeLogic = async (res) => {
   try {
     const page = await browser.newPage();
 
-    await page.goto("https://developer.chrome.com/");
+    await page.goto("https://chemicalsafety.com/");
 
     // Set screen size
     await page.setViewport({ width: 1080, height: 1024 });
 
     // Type into search box
-    await page.type(".search-box__input", "automate beyond recorder");
+    await page.type(".eb-social-links-vb3p467 eb-social-links-wrapper");;
 
     // Wait and click on first result
     const searchResultSelector = ".search-box__link";
