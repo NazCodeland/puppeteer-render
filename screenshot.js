@@ -21,7 +21,7 @@ async function launchConfiguredBrowser() {
             // "--disable-component-update",
             // "--disable-default-apps",
             // "--disable-domain-reliability",
-            // "--disable-extensions",
+            "--disable-extensions",
             // "--disable-features=AudioServiceOutOfProcess",
             // "--disable-hang-monitor",
             // "--disable-ipc-flooding-protection",
