@@ -69,7 +69,6 @@ async function takeScreenshot(options, page) {
         });
         screenshots.push(screenshot);
     }
-    console.log('Screenshots taken', screenshots);
     return screenshots;
 }
 export async function handleScreenshot(options) {
