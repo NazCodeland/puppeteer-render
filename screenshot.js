@@ -39,7 +39,7 @@ async function takeScreenshot(options, page) {
     console.log('Screenshots taken', screenshots);
     return screenshots;
 }
-export async function handleScreenshot(options) {
+async function handleScreenshot(options) {
     const browser = await launchConfiguredBrowser();
     const pages = await browser.pages();
     const page = pages[0];
@@ -48,4 +48,6 @@ export async function handleScreenshot(options) {
     await browser.close();
     return screenshots;
 }
+
+module.exports = { handleScreenshot };
 //# sourceMappingURL=screenshot.js.map
