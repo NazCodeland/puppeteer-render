@@ -1,5 +1,5 @@
-const express = require("express");
-const { handleScreenshot } = require("./screenshot");
+import express from "express";
+import { handleScreenshot } from "./screenshot";
 const app = express();
 const PORT = process.env.PORT || 4000;
 

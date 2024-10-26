@@ -1,5 +1,6 @@
 {
   "name": "puppeteer-render",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,6 +15,5 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "puppeteer": "^19.7.2",
-    "tsx": "^4.19.1"
   }
 }
