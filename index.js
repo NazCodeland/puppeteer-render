@@ -1,17 +1,20 @@
 import express from "express";
 import { handleScreenshot } from "./screenshot.js";
+
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 console.log("received request");
+
+// CORS middleware
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Content-Type");
   res.header("Access-Control-Allow-Methods", "GET, OPTIONS");
-
   if (req.method === "OPTIONS") {
     return res.sendStatus(204);
   }
+  next();
 });
 
 app.get("/scrape", async (req, res) => {
@@ -28,6 +31,6 @@ app.get("/", (req, res) => {
   res.send("Render Puppeteer server is up and running!");
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Listening on port ${PORT}`);
 });
