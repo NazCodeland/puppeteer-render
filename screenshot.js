@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-console.log('Puppeteer version:', puppeteer);
 async function launchConfiguredBrowser() {
     const browser = await puppeteer.launch({
         // headless: true, // default option
