@@ -24,7 +24,7 @@ const scrapeLogic = async (res) => {
     // Grab the text from the element
     const logStatement = await page.evaluate(() => {
       const element = document.querySelector('h2.forcedClrAdjust');
-      return element ? element.innerText : '';
+      return element ? element.innerText : 'no element found';
     });
 
     res.send(logStatement);
