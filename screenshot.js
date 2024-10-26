@@ -5,7 +5,7 @@ dotenv.config();
 
 async function launchConfiguredBrowser() {
     const browser = await puppeteer.launch({
-        headless: true,
+        // headless: true, // default option
         args: [
             "--disable-setuid-sandbox",
             "--no-sandbox",
