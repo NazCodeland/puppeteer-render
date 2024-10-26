@@ -11,7 +11,7 @@ app.get("/scrape", async (req, res) => {
     decodeURIComponent(rawOptions ?? '{}')
   );
 
-
+  console.log('options', options);
   const screenshots = await handleScreenshot(options);
   res.status(200).json(screenshots);
 });
