@@ -6,7 +6,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-RUN npm ci && npm install tsx
+RUN npm ci
 COPY . .
 CMD ["npx", "tsx", "src/index.ts"]
 
