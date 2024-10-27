@@ -1,4 +1,4 @@
-FROM ghcr.io/puppeteer/puppeteer:23.0.0
+FROM ghcr.io/puppeteer/puppeteer:22.0.0
 FROM node:18-slim
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
