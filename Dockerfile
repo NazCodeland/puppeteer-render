@@ -1,7 +1,10 @@
-FROM ghcr.io/puppeteer/puppeteer:21.11.0
+FROM ghcr.io/puppeteer/puppeteer:23.6.0
+FROM node:18-slim
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
-    PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable \
+    PUPPETEER_CACHE_DIR=/home/pptruser/.cache/puppeteer
+
 
 WORKDIR /usr/src/app
 
